@@ -1,0 +1,3 @@
+C:/Users/pente/source/repos/CyberJaeger/Anx/out/build/x64-Debug/CMakeFiles/Anx.dir
+C:/Users/pente/source/repos/CyberJaeger/Anx/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/pente/source/repos/CyberJaeger/Anx/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

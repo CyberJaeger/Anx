@@ -1,3 +1,0 @@
-C:/Users/pente/OneDrive/Desktop/Anx/build/CMakeFiles/Anx.dir
-C:/Users/pente/OneDrive/Desktop/Anx/build/CMakeFiles/edit_cache.dir
-C:/Users/pente/OneDrive/Desktop/Anx/build/CMakeFiles/rebuild_cache.dir

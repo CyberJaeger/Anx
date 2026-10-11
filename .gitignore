@@ -1,0 +1,14 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Compilados y binarios
+x64/
+Debug/
+Release/
+*.obj
+*.exe
+*.pdb
