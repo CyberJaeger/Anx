@@ -1,6 +1,7 @@
 #pragma once
 
-#include "windows.hpp"
+#include "windows/windows.hpp"
+#include "gui/AnxGui.hpp"
 
 
 class Application {
@@ -13,5 +14,7 @@ public:
 
 private:
 	Windows m_windows;
+	AnxGui m_anxGui;
+
 	bool g_Running = true;
 };

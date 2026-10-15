@@ -1,3 +1,23 @@
 # ninja log v7
-8	1089	8134333369536744	CMakeFiles/Anx.dir/src/main.cpp.obj	cb224310fe08740
-1091	1404	8134333380374509	Anx.exe	391cf8b3df47080c
+22	732	8137975432504181	CMakeFiles/Anx.dir/src/main.cpp.obj	d56f9508f66943e1
+758	1228	8137973034759904	Anx.exe	5de31719fc2222ab
+5	229	8137977420462528	build.ninja	8e6f987c425086c4
+5	229	8137977420306277	C:/Users/pente/source/repos/CyberJaeger/Anx/out/build/x64-Debug/cmake_install.cmake	8e6f987c425086c4
+120	1286	8137895447585069	CMakeFiles/Anx.dir/third_party/imgui/imgui_tables.cpp.obj	f15f670385a266d3
+104	1426	8137895447390406	CMakeFiles/Anx.dir/third_party/imgui/imgui_draw.cpp.obj	8366a10e2b4ea2e1
+97	2074	8137895447365186	CMakeFiles/Anx.dir/third_party/imgui/imgui.cpp.obj	217788350167a504
+57	597	8137896240059504	CMakeFiles/Anx.dir/third_party/imgui/imgui_impl_win32.cpp.obj	f5fcb3ba4d5c5cc0
+48	942	8137896239958180	CMakeFiles/Anx.dir/third_party/imgui/imgui_widgets.cpp.obj	606a9f52603fce4c
+66	940	8137896240141247	CMakeFiles/Anx.dir/third_party/imgui/imgui_impl_dx11.cpp.obj	20789e909b87383c
+30	739	8137975432660423	CMakeFiles/Anx.dir/src/app/Application.cpp.obj	5eefcd011582996b
+23	726	8137935309716332	CMakeFiles/Anx.dir/src/window/windows.cpp.obj	a2be7e528df2a4b0
+37	544	8137934777693030	CMakeFiles/Anx.dir/third_party/imgui/imgui_demo.cpp.obj	b3bf53d6fba83efc
+42	174	8137973027595585	CMakeFiles/Anx.dir/src/gui/AnxGui.cpp.obj	7a125cc5e0b44558
+21	232	8137977420462528	build.ninja	8e6f987c425086c4
+21	232	8137977420462528	C:/Users/pente/source/repos/CyberJaeger/Anx/out/build/x64-Debug/cmake_install.cmake	8e6f987c425086c4
+43	198	8137977421868799	CMakeFiles/Anx.dir/src/gui/AnxGui.cpp.obj	7a125cc5e0b44558
+199	419	8137977423415995	Anx.exe	5de31719fc2222ab
+25	158	8137979331132817	CMakeFiles/Anx.dir/src/gui/AnxGui.cpp.obj	7a125cc5e0b44558
+159	334	8137979332538734	Anx.exe	5de31719fc2222ab
+8	949	8137995558403775	CMakeFiles/Anx.dir/src/gui/AnxGui.cpp.obj	7a125cc5e0b44558
+951	1232	8137995567829621	Anx.exe	5de31719fc2222ab

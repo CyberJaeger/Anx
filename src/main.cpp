@@ -1,6 +1,7 @@
-#include <iostream>
+#include "../Anx/include/app/Application.hpp"
 
 int main() {
-	std::cout << "Hello, World!" << std::endl;
-	return 0;
+    Application app;
+    app.Run();
+    return 0;
 }

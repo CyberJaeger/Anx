@@ -1,6 +1,29 @@
-#include "windows.hpp"
+#include "windows/windows.hpp"
 #include "imgui_impl_win32.h"
 #include "imgui_impl_dx11.h"
+
+// Declaración del WndProc para ImGui
+extern IMGUI_IMPL_API LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+
+LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam) {
+    if (ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, lParam))
+        return true;
+
+    switch (msg) {
+    case WM_SIZE:
+        if (wParam == SIZE_MINIMIZED)
+            return 0;
+        return 0;
+    case WM_SYSCOMMAND:
+        if ((wParam & 0xfff0) == SC_KEYMENU)
+            return 0;
+        break;
+    case WM_DESTROY:
+        ::PostQuitMessage(0);
+        return 0;
+    }
+    return ::DefWindowProcW(hWnd, msg, wParam, lParam);
+}
 
 Windows::Windows() {
     ImGui_ImplWin32_EnableDpiAwareness();
@@ -16,7 +39,7 @@ Windows::Windows() {
     m_hWnd = ::CreateWindowW(
         wc.lpszClassName, L"Anx - DirectX 11",
         WS_OVERLAPPEDWINDOW, 100, 100,
-        (int)(1280 * main_scale), (int)(800 * main_scale),
+        (int)(800 * main_scale), (int)(600 * main_scale),
         nullptr, nullptr, wc.hInstance, nullptr
     );
 
@@ -48,12 +71,10 @@ bool Windows::CreateDevices(HWND hWnd) {
     sd.BufferDesc.ScanlineOrdering = DXGI_MODE_SCANLINE_ORDER_UNSPECIFIED;
     sd.BufferDesc.Scaling = DXGI_MODE_SCALING_UNSPECIFIED;
 
-
     sd.SampleDesc.Count = 1;
     sd.SampleDesc.Quality = 0;
 
     sd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
-
     sd.BufferCount = 2;
 
     sd.OutputWindow = hWnd;
@@ -110,13 +131,12 @@ bool Windows::ProcessMessages() {
         ::TranslateMessage(&msg);
         ::DispatchMessage(&msg);
         if (msg.message == WM_QUIT)
-            return false; 
+            return false;
     }
     return true;
 }
 
 void Windows::BeginFrame() {
-   
     const float clear_color[4] = { 0.45f, 0.55f, 0.60f, 1.00f };
     m_pContext->OMSetRenderTargets(1, &m_pRenderTargetView, nullptr);
     m_pContext->ClearRenderTargetView(m_pRenderTargetView, clear_color);
